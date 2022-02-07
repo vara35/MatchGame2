@@ -8,12 +8,13 @@
   padding-right: 10px;
   padding-top: 8px;
   padding-bottom: 8px;
+  height: 80px;
 }
 
 @media screen and (min-width: 567px) {
   .navbar {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -21,7 +22,6 @@
 
 @media screen and (min-width: 992px) {
   .navbar {
-    padding: 12px;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -73,4 +73,13 @@
   justify-content: flex-end;
   align-items: center;
   width: 40%;
+}
+.score-container {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-right: 10px;
+}
+.score {
+  color: #ffffff;
 }

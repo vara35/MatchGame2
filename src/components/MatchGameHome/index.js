@@ -280,11 +280,13 @@ class MatchGameHome extends Component {
 
   getThumbnailId = id => {
     const {initialShuffleImage} = this.state
-    const generateShuffleImage = imagesList.sort(() => Math.random() - 0.5)
+    const generateRandomNumber = Math.ceil(Math.random() * imagesList.length)
+    imagesList.sort(() => Math.random() - 0.5)
+
     if (initialShuffleImage.id === id) {
       this.setState(prev => ({
         score: prev.score + 1,
-        initialShuffleImage: generateShuffleImage[0],
+        initialShuffleImage: imagesList[generateRandomNumber],
       }))
     } else {
       this.setState({showImagesStatus: false})
@@ -333,6 +335,7 @@ class MatchGameHome extends Component {
 
   showImages = () => {
     const {initialId, initialShuffleImage} = this.state
+
     const filterImages = imagesList.filter(
       eachOne => eachOne.category === initialId,
     )

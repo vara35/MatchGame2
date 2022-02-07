@@ -13,15 +13,18 @@ class Navbar extends Component {
           className="website-logo"
         />
         <ul className="score-timer-container">
-          <p className="score-heading">Score : {score}</p>
-          <div className="time-container">
+          <li className="score-container">
+            <p className="score-heading">Score:</p>
+            <p className="score">{score}</p>
+          </li>
+          <li className="time-container">
             <img
               src="https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png"
               alt="timer"
               className="timer"
             />
             <p className="score-heading">{counter} sec</p>
-          </div>
+          </li>
         </ul>
       </nav>
     )
