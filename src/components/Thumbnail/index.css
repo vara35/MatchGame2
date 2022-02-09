@@ -13,4 +13,9 @@
 }
 .thumbnail-image {
   width: 100%;
+  border-radius: 10px;
+}
+.list-button {
+  background-color: transparent;
+  border: 0;
 }

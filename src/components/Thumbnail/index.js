@@ -7,8 +7,8 @@ const Thumbnail = props => {
   }
 
   return (
-    <li className="list" onClick={addScoreFunction}>
-      <button type="button">
+    <li className="list">
+      <button type="button" onClick={addScoreFunction} className="list-button">
         <img
           src={item.thumbnailUrl}
           alt="thumbnail"
