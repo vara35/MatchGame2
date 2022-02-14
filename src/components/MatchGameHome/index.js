@@ -282,11 +282,10 @@ class MatchGameHome extends Component {
     const {initialShuffleImage} = this.state
     const generateRandomNumber = Math.ceil(Math.random() * imagesList.length)
     imagesList.sort(() => Math.random() - 0.5)
-
     if (initialShuffleImage.id === id) {
       this.setState(prev => ({
         score: prev.score + 1,
-        initialShuffleImage: imagesList[generateRandomNumber],
+        initialShuffleImage: imagesList[generateRandomNumber - 1],
       }))
     } else {
       this.setState({showImagesStatus: false})
